@@ -6,7 +6,7 @@ module.exports = {
     try {
       config = require('./../config.json');
     } catch(e){
-      console.log(`Error when importing config.json file, make sure that you added it with required values, e: ${e}`)
+      console.log('\x1b[31m', `Error when importing config.json file, make sure that you added it with required values, e: ${e}`)
     }
     let slackCred = config.slack || {};
     let twitterCred = config.twitter || {};
