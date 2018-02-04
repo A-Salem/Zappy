@@ -19,6 +19,7 @@ It is an integration tool between twitter and slack. When any user on the market
 
 4. Go to twitter and add tweets and go to slack channel and hit on Marketing channel any text contain “go” word and you will see the tweets appear in our angular app
 
+5. To stop the containers type ```docker-compose down``` in the directory of the project
 
 ## Testing
 >To run test on our express server. In the directory of your app run:
