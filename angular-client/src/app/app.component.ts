@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
     this.getAllTweets();
     const channel = this.pusherService.pusher.subscribe('tweets');
     channel.bind('newTrigger', (data) => {
-      console.log(data)
+      // console.log(data);
       this.tweets = data.tweets;
     });
 
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
     this._http.get(`${this.API}/tweets`)
       .map(res => res.json())
       .subscribe(tweets => {
-        console.log(tweets)
+        // console.log(tweets);
         this.tweets = tweets
       })
   }
