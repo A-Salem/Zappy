@@ -12,6 +12,7 @@ COPY package.json /usr/src/app
 
 # Install dependecies
 RUN npm install
+RUN npm install -g mocha
 
 # Get all the code needed to run the app
 COPY . /usr/src/app

@@ -1,9 +1,15 @@
 module.exports = {
   integrate(){
+
     //config data
-    const config = require('./../config.json');
-    const slackCred = config.slack;
-    const twitterCred = config.twitter;
+    let config = {};
+    try {
+      config = require('./../config.json');
+    } catch(e){
+      console.log(`Error when importing config.json file, make sure that you added it with required values, e: ${e}`)
+    }
+    let slackCred = config.slack || {};
+    let twitterCred = config.twitter || {};
 
     // slack
     const RtmClient = require('@slack/client').RtmClient;

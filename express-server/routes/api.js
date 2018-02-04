@@ -7,8 +7,13 @@ const router = express.Router();
 const dbHost = 'mongodb://database/zappy';
 
 //config data
-const config = require('./../config.json');
-const pusherCred = config.pusher
+let config = {};
+try {
+  config = require('./../config.json');
+} catch(e){
+  console.log(`Error when importing config.json file, make sure that you added it with required values, e: ${e}`)
+}
+let pusherCred = config.pusher || {}
 
 // Connect to mongodb
 mongoose.connect(dbHost);
