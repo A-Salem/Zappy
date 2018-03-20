@@ -39,4 +39,9 @@ It is an integration tool between twitter and slack. When any user on the market
 
     docker rmi $(docker images -q)
 
+
+>For rerunning ```docker-compose up --build``` without conflicts run this command in the directory of the app:
+
+    docker-compose rm
+
 ----
